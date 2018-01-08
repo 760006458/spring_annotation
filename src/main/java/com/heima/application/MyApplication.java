@@ -4,10 +4,7 @@ import com.heima.dao.UserDao;
 import com.mchange.v2.c3p0.DataSources;
 import com.mchange.v2.c3p0.mbean.C3P0PooledDataSource;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.annotation.*;
 
 import javax.naming.NamingException;
 import java.beans.PropertyVetoException;
