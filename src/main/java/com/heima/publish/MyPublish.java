@@ -12,9 +12,10 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class MyPublish {
-    @Autowired
+    @Autowired  //ApplicationContext在spring容器中默认存在，不需要手动配置@Bean
     private ApplicationContext applicationContext;
-    public void myPublish(){
-        applicationContext.publishEvent(new MyEvent(this,"处理一封邮件"));
+
+    public void myPublish() {
+        applicationContext.publishEvent(new MyEvent(this, "处理一封邮件"));
     }
 }
