@@ -4,6 +4,7 @@ import com.heima.dao.UserDao;
 import com.heima.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Service;
 
 /**
@@ -13,8 +14,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserService {
     @Autowired
-    @Qualifier("abc")   // <bean id="abc" class="com.heima.dao.UserDao"/>
+//    @Qualifier("abc")   // <bean id="abc" class="com.heima.dao.UserDao"/>
     private UserDao userDao;
+
+//    @Autowired
+//    private ApplicationContext applicationContext;
 
     public User findUser() {
         return userDao.findUser();

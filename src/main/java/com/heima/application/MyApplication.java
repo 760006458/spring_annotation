@@ -28,8 +28,22 @@ public class MyApplication {
     @Value("${password}")
     private String password;
 
-    @Bean
+    /*@Bean
+    @Profile("dev")
     public UserDao abc() {    // <bean id="abc" class="com.heima.dao.UserDao"/>
+        System.out.println("开发模式--bean创建");
+        return new UserDao();
+    }
+
+    @Bean
+    @Profile("prod")
+    public UserDao abc2() {    // <bean id="abc" class="com.heima.dao.UserDao"/>
+        System.out.println("生产模式--bean创建");
+        return new UserDao();
+    }*/
+
+    @Bean
+    public UserDao getUserDao() {    // <bean id="getUserDao" class="com.heima.dao.UserDao"/>
         return new UserDao();
     }
 
